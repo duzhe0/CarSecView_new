@@ -33,7 +33,7 @@ class StrideNode:
             self.start_time = new_data[0]
         if new_data[-1] == 'T':
             self.label = 0
-        print(new_data[3])
+        #print(new_data[3]) 052374092322006eR 0000000000000000T
         self.unique_id.add(new_data[1])
         self.temp_dlc[new_data[3]] += 1
         self.number += 1
