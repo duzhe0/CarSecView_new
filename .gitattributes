@@ -1,0 +1,8 @@
+# 使用 Git LFS 跟踪超过 100MB 的大文件
+#filter=lfs	启用 Git LFS，将文件上传到 LFS 服务器	必需
+#diff=lfs	让 git diff 能正确显示 LFS 文件的变化	推荐
+#merge=lfs	让 git merge 能正确处理 LFS 文件	推荐
+#-text	标记为非文本文件，避免文本转换	可选
+#相对于根目录的相对路径 filter=lfs diff=lfs merge=lfs -text
+data/Car_Hacking_Challenge_Dataset_rev20Mar2021/0_Preliminary/1_Submission/Pre_submit_D.csv filter=lfs diff=lfs merge=lfs -text
+data/Car_Hacking_Challenge_Dataset_rev20Mar2021/0_Preliminary/1_Submission/Pre_submit_S.csv filter=lfs diff=lfs merge=lfs -text
