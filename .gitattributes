@@ -17,7 +17,8 @@
 #    git clone git@github.com:duzhe0/CarSecView_new.git
 #
 # 4. 如果克隆时未安装 Git LFS，大文件会显示为"指针文件"（只有几KB）:
-#    检查方法: ls -lh data/Car_Hacking_Challenge_Dataset_rev20Mar2021/0_Preliminary/1_Submission/
+#    检查方法: s -lh data/Pre_submit_D.csv  
+#    或进入文件夹查看文件大小
 #    如果文件很小（如几KB），说明是指针文件，需要运行:
 #    git lfs pull
 #    这会下载实际的 LFS 文件内容
@@ -29,5 +30,5 @@
 
 
 #使用以下语句跟踪大文件
-data/Car_Hacking_Challenge_Dataset_rev20Mar2021/0_Preliminary/1_Submission/Pre_submit_D.csv filter=lfs diff=lfs merge=lfs -text
-data/Car_Hacking_Challenge_Dataset_rev20Mar2021/0_Preliminary/1_Submission/Pre_submit_S.csv filter=lfs diff=lfs merge=lfs -text
+data/Pre_submit_D.csv filter=lfs diff=lfs merge=lfs -text
+data/Pre_submit_S.csv filter=lfs diff=lfs merge=lfs -text

@@ -33,6 +33,7 @@ class StrideNode:
             self.start_time = new_data[0]
         if new_data[-1] == 'T':
             self.label = 0
+        print(new_data[3])
         self.unique_id.add(new_data[1])
         self.temp_dlc[new_data[3]] += 1
         self.number += 1
@@ -50,9 +51,9 @@ class StrideNode:
 
 
 class CarQueue(deque):
-    def __init__(self, max_len, stride, window_size=3):
+    def __init__(self, max_len, stride, window_size=3):#30 1 3
         self.max_len = max_len
-        self.node_len = int(window_size / stride)
+        self.node_len = int(window_size / stride)#30
         self.before = None
         super().__init__(maxlen=max_len)
 

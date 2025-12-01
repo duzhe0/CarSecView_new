@@ -282,7 +282,7 @@ async def process_csv_line(line: str) -> list:
             timestamp = float(parts[0])
             _id = parts[1]
             dlc = int(parts[2])
-            data_parts = [p for p in parts[3:3+dlc+1]]
+            data_parts = [p for p in parts[3:3+dlc+1]]# +1的语义是包含标志位字段，why?
             return [timestamp, _id, dlc] + data_parts
         except ValueError:
             return None
@@ -430,6 +430,7 @@ async def add2queue(file_path: str):
                     await asyncio.sleep(time_diff)
             previous_timestamp = timestamp
             #print(processed_data)
+            #以下两行导致了 时间戳变化速度是真实时间速度 + 数据集变化速度
             current_time = time.time()
             new_timestamp=current_time+time_diff
         
