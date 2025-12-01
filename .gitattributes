@@ -1,8 +1,33 @@
-# 使用 Git LFS 跟踪超过 100MB 的大文件
-#filter=lfs	启用 Git LFS，将文件上传到 LFS 服务器	必需
-#diff=lfs	让 git diff 能正确显示 LFS 文件的变化	推荐
-#merge=lfs	让 git merge 能正确处理 LFS 文件	推荐
-#-text	标记为非文本文件，避免文本转换	可选
-#相对于根目录的相对路径 filter=lfs diff=lfs merge=lfs -text
+# 本仓库使用 Git LFS 管理超过 100MB 的大文件
+#
+# 【首次使用步骤】
+# 0. 检查是否已安装 Git LFS:
+#    git lfs version
+#    如果显示版本号，说明已安装，跳到步骤2
+#
+# 1. 安装 Git LFS（如果未安装）:
+#    Windows: https://git-lfs.github.com/
+#    macOS:   brew install git-lfs
+#    Linux:   sudo apt-get install git-lfs
+#
+# 2. 初始化 Git LFS（全局，只需一次）:
+#    git lfs install
+#
+# 3. 克隆仓库:
+#    git clone git@github.com:duzhe0/CarSecView_new.git
+#
+# 4. 如果克隆时未安装 Git LFS，大文件会显示为"指针文件"（只有几KB）:
+#    检查方法: ls -lh data/Car_Hacking_Challenge_Dataset_rev20Mar2021/0_Preliminary/1_Submission/
+#    如果文件很小（如几KB），说明是指针文件，需要运行:
+#    git lfs pull
+#    这会下载实际的 LFS 文件内容
+#
+# 5. 验证 LFS 文件是否正确下载:
+#    git lfs ls-files
+#    应该能看到被 LFS 跟踪的文件列表
+# ============================================
+
+
+#使用以下语句跟踪大文件
 data/Car_Hacking_Challenge_Dataset_rev20Mar2021/0_Preliminary/1_Submission/Pre_submit_D.csv filter=lfs diff=lfs merge=lfs -text
 data/Car_Hacking_Challenge_Dataset_rev20Mar2021/0_Preliminary/1_Submission/Pre_submit_S.csv filter=lfs diff=lfs merge=lfs -text

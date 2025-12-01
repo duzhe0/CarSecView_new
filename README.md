@@ -11,6 +11,7 @@ uvicorn api.traffic_visualization:app --host 0.0.0.0 --port 8000 --reload
 npm run dev
 ```
 
+协作者请看 .gitattributes 文件，git clone大文件需要配置Git LFS
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
